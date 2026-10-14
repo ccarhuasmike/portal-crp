@@ -1,0 +1,29 @@
+<div
+  class="wp-block-crp-slider crp-slider--pagination-lines crp-slider--pagination-internal crp-slider--equal-height"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <div class="crp-slider__viewport swiper">
+    <div class="crp-slider__track swiper-wrapper" [style.transform]="'translate3d(-' + (activeIndex() * 100) + '%, 0, 0)'">
+      @for (item of items; track $index) {
+        <div class="crp-slide swiper-slide" [class.swiper-slide-active]="$index === activeIndex()">
+          <ng-container *ngTemplateOutlet="slideTemplate ?? null; context: { $implicit: item, index: $index }"></ng-container>
+        </div>
+      }
+    </div>
+  </div>
+
+  @if (items.length > 1) {
+    <div class="crp-slider__pagination crp-slider__pagination--internal">
+      @for (item of items; track $index) {
+        <button
+          type="button"
+          class="crp-slider__bullet"
+          [class.is-active]="$index === activeIndex()"
+          [attr.aria-label]="'Ir a la diapositiva ' + ($index + 1)"
+          (click)="goTo($index)"
+        ></button>
+      }
+    </div>
+  }
+</div>

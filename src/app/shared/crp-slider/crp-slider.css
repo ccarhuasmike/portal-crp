@@ -1,0 +1,6 @@
+/* Minimal behavioural styles; visual design comes from the migrated
+   crp-core "crp-slider" stylesheet (wp-block-crp-slider, swiper-*). */
+.crp-slider__track {
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}

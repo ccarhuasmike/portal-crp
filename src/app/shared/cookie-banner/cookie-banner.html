@@ -1,0 +1,42 @@
+@if (cookieConsent.status() === null) {
+  <div
+    class="fixed inset-x-0 bottom-0 z-50 flex flex-col gap-3 bg-gray-900/95 px-4 py-4 text-sm text-gray-100 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+    role="dialog"
+    aria-live="polite"
+    aria-label="Aviso de cookies"
+  >
+    <p class="max-w-3xl text-xs leading-relaxed text-gray-300 sm:text-sm">
+      Las cookies de este sitio web se usan para personalizar el contenido y los anuncios, ofrecer funciones de redes
+      sociales y analizar el tráfico. Además, compartimos información sobre el uso que haga del sitio web con nuestros
+      partners de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que les haya
+      proporcionado o que hayan recopilado a partir del uso que haya hecho de sus servicios. Puede ver más información en
+      nuestra
+      <a href="informacion-legal/politicas-de-cookies/index.html" class="underline hover:text-white">Política de cookies</a>.
+    </p>
+    <div class="flex shrink-0 items-center gap-2">
+      <button
+        type="button"
+        class="rounded-full bg-teal-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-teal-400"
+        (click)="accept()"
+      >
+        Aceptar
+      </button>
+      <button
+        type="button"
+        class="rounded-full border border-teal-400 px-4 py-2 text-xs font-semibold text-teal-200 transition hover:bg-teal-500/20"
+        (click)="reject()"
+      >
+        Denegar
+      </button>
+      <!--
+        "Configurar" in the original opens the moove_gdpr granular-preferences
+        modal (per-category toggles persisted via its own backend). That
+        modal is not reproduced here; the button is kept for visual parity
+        but currently has no bound behaviour beyond focus/hover styling.
+      -->
+      <button type="button" class="rounded-full border border-white/30 px-4 py-2 text-xs font-semibold text-gray-200">
+        Configurar
+      </button>
+    </div>
+  </div>
+}

@@ -1,0 +1,332 @@
+<!-- Hero: afiliación + promo PlanSalud -->
+<section class="overflow-hidden bg-gradient-to-br from-teal-600 to-teal-700">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-12 sm:px-6 md:grid-cols-2 md:py-16 lg:px-8">
+    <div class="text-white">
+      <h1 class="text-3xl font-bold sm:text-4xl">¡Afíliate hoy!</h1>
+      <a
+        href="plansalud/index.html#cotizador_formulario"
+        class="mt-6 inline-block rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-teal-700 shadow-sm transition hover:bg-teal-50"
+      >
+        Cotiza aquí
+      </a>
+    </div>
+
+    <div class="relative flex min-h-[220px] items-center justify-center overflow-hidden rounded-2xl bg-teal-800/60 p-6 sm:min-h-[260px]">
+      <div
+        class="absolute -right-10 -top-16 h-56 w-56 rotate-12 bg-teal-400/30 sm:h-72 sm:w-72"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="absolute -bottom-20 -left-10 h-48 w-48 -rotate-12 bg-teal-300/20 sm:h-64 sm:w-64"
+        aria-hidden="true"
+      ></div>
+      <div class="relative text-center text-white">
+        <p class="text-lg font-semibold tracking-wide">PlanSalud</p>
+        <p class="text-6xl font-extrabold leading-none sm:text-7xl">50%</p>
+        <p class="text-xl font-bold tracking-widest">DSCTO</p>
+        <p class="mt-3 inline-block rounded-full bg-pink-500 px-4 py-1 text-sm font-semibold">por 9 meses</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portal del Paciente / Paquetes de Salud / Atención al Paciente -->
+  <div class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      @for (card of serviceCards; track card.title) {
+        <div class="flex flex-col items-start gap-3 rounded-2xl bg-white/95 p-6 shadow-sm">
+          <img [src]="card.icon" alt="" class="h-10 w-10" aria-hidden="true" />
+          <h2 class="text-lg font-semibold text-teal-700">{{ card.title }}</h2>
+          <p class="text-sm text-gray-600">{{ card.description }}</p>
+          <a
+            [href]="card.href"
+            [target]="card.external ? '_blank' : null"
+            [rel]="card.external ? 'noreferrer noopener' : null"
+            class="mt-auto rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700"
+          >
+            {{ card.cta }}
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Maternidad -->
+<section class="bg-pink-50">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+        Vive tu maternidad con la tranquilidad de estar en las <em class="text-pink-600 not-italic">mejores manos</em>
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-gray-600">
+        En la Clínica Ricardo Palma, acompañamos cada etapa de tu embarazo con tecnología de vanguardia, atención
+        personalizada y un equipo médico especializado que cuida de ti y tu bebé antes, durante y después del parto.
+      </p>
+      <a
+        href="productos/maternidad/index.html"
+        class="mt-6 inline-block rounded-full border-2 border-pink-500 px-6 py-2.5 text-sm font-semibold text-pink-600 transition hover:bg-pink-500 hover:text-white"
+      >
+        Conoce los paquetes →
+      </a>
+    </div>
+    <div class="overflow-hidden rounded-2xl">
+      <img
+        src="wp-content/uploads/2026/09/doctor-are-checking-pregnant-woman-with-stethoscope-hospital-healthcare-concept-600x401.jpg"
+        alt="Doctora revisando a una paciente embarazada"
+        class="h-full w-full object-cover"
+        width="600"
+        height="401"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Encuentra a tu médico -->
+<section class="bg-teal-600">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 lg:px-8">
+    <div class="order-2 overflow-hidden rounded-2xl md:order-1">
+      <img
+        src="wp-content/uploads/2026/04/Buscador_medico-600x600.png"
+        alt="Médico de la Clínica Ricardo Palma"
+        class="h-full w-full object-cover"
+        width="600"
+        height="600"
+        loading="lazy"
+      />
+    </div>
+    <div class="order-1 rounded-2xl bg-white/95 p-6 shadow-sm md:order-2">
+      <div class="flex items-center gap-3 rounded-t-xl bg-teal-900 px-5 py-4 text-white">
+        <img src="wp-content/uploads/2026/02/camilla-medica.svg" alt="" class="h-7 w-7 invert" aria-hidden="true" />
+        <h2 class="text-lg font-semibold">
+          Encuentra a tu <em class="not-italic text-teal-200">médico</em>
+        </h2>
+      </div>
+      <div class="rounded-b-xl bg-teal-50 px-5 py-4">
+        <p class="text-center text-sm font-semibold text-teal-800">Busca por nombre o especialidad</p>
+        <label for="staff-search" class="sr-only">Buscar médico</label>
+        <div class="relative mt-3">
+          <svg
+            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            id="staff-search"
+            type="search"
+            placeholder="Buscar"
+            class="w-full rounded-full border border-gray-200 bg-white py-2.5 pl-10 pr-4 text-sm text-gray-700 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+            [value]="staffSearchQuery()"
+            (input)="onStaffSearchInput($any($event.target).value)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Noticias -->
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+      @for (news of newsCards; track news.title) {
+        <article class="flex flex-col gap-3 rounded-2xl bg-gray-50 p-6 shadow-sm">
+          <span class="w-fit rounded-full bg-teal-600 px-3 py-1 text-xs font-semibold text-white">{{ news.category }}</span>
+          <time class="text-xs text-gray-400">{{ news.date }}</time>
+          <h3 class="text-base font-semibold text-gray-900">{{ news.title }}</h3>
+          <p class="text-sm text-gray-600">{{ news.excerpt }}</p>
+          <a
+            href="blog/index.html"
+            class="mt-auto w-fit rounded-full border-2 border-teal-600 px-4 py-2 text-sm font-semibold text-teal-700 transition hover:bg-teal-600 hover:text-white"
+          >
+            Leer más →
+          </a>
+        </article>
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="blog/index.html"
+        class="inline-block rounded-full bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-700"
+      >
+        Ver todo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PlanSalud: protección total -->
+<section class="bg-gray-50">
+  <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="rounded-2xl bg-white p-8 shadow-sm sm:p-10">
+      <span class="inline-block rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">¡Adquiérelo hoy!</span>
+      <h2 class="mt-4 text-2xl font-bold text-gray-900 sm:text-3xl">
+        Protección total con<br /><span class="text-teal-600">PlanSalud</span>
+      </h2>
+      <p class="mt-4 text-sm text-gray-600">
+        Con PlanSalud, tu familia y tú tienen acceso a la mejor atención médica con beneficios exclusivos:
+      </p>
+      <ul class="mt-5 space-y-3">
+        @for (benefit of planBenefits; track benefit.text) {
+          <li class="flex items-start gap-2 text-sm text-gray-700">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-teal-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.5 7.586a1 1 0 0 1-1.42.006l-3.5-3.5a1 1 0 1 1 1.414-1.414l2.794 2.793 6.793-6.871a1 1 0 0 1 1.413-.014Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            {{ benefit.text }}
+          </li>
+        }
+      </ul>
+      <a
+        href="plansalud/index.html"
+        class="mt-7 inline-block rounded-full bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-700"
+      >
+        Afíliate hoy →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="bg-purple-50">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <h2 class="flex items-center gap-2 text-2xl font-bold text-pink-600 sm:text-3xl">
+      <img src="wp-content/uploads/2026/03/icon-corazon-curitas.svg" alt="" class="h-7 w-7" aria-hidden="true" />
+      Lo que dicen nuestros <em class="not-italic">pacientes</em>
+    </h2>
+
+    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <figure class="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm">
+          <blockquote class="text-sm text-gray-600">&ldquo;{{ testimonial.quote }}&rdquo;</blockquote>
+          <div class="mt-auto">
+            <div class="flex gap-0.5 text-teal-500" aria-hidden="true">
+              @for (star of [1, 2, 3, 4, 5]; track star) {
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 0 0 .951.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.447a1 1 0 0 0-.363 1.118l1.287 3.957c.3.922-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 0 0-1.176 0l-3.366 2.446c-.784.57-1.838-.196-1.539-1.118l1.286-3.957a1 1 0 0 0-.363-1.118L2.06 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 0 0 .95-.69z"
+                  />
+                </svg>
+              }
+            </div>
+            <figcaption class="mt-1">
+              <span class="block text-sm font-semibold text-gray-900">{{ testimonial.name }}</span>
+              <span class="block text-xs text-gray-500">{{ testimonial.role }}</span>
+            </figcaption>
+          </div>
+        </figure>
+      }
+    </div>
+
+    <!-- Deja tu felicitación -->
+    <div class="mt-8 flex flex-col items-center gap-4 rounded-2xl bg-white p-6 shadow-sm sm:flex-row sm:justify-between">
+      <div class="flex items-center gap-4">
+        <img src="wp-content/uploads/2026/03/icon-open-book.svg" alt="" class="h-10 w-10 shrink-0" aria-hidden="true" />
+        <div>
+          <h3 class="text-base font-semibold text-gray-900">
+            ¿Tuviste una buena <em class="not-italic text-teal-600">experiencia?</em>
+          </h3>
+          <p class="text-sm text-gray-600">
+            Comparte tu historia en nuestro Libro de Felicitaciones y ayuda a otros pacientes.
+          </p>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="shrink-0 rounded-full bg-pink-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-pink-600"
+        (click)="openFeedbackModal()"
+      >
+        Deja tu felicitación
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Descarga nuestra App -->
+<section class="bg-gray-50">
+  <div class="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6 lg:px-8">
+    <img src="wp-content/uploads/2026/02/telefono-inteligente.svg" alt="" class="mx-auto h-12 w-12" aria-hidden="true" />
+    <h2 class="mt-4 text-2xl font-bold text-teal-700 sm:text-3xl">Descarga nuestra App</h2>
+    <p class="mt-3 text-sm text-gray-600">
+      Administra tu información médica, programa tus citas y consulta resultados desde tu computadora o dispositivo
+      móvil.
+    </p>
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+      <a href="https://play.google.com/store/apps/details?id=com.app.crp&hl=es_PE&pli=1" target="_blank" rel="noreferrer noopener">
+        <img src="wp-content/uploads/2026/02/google-play.svg" alt="Disponible en Google Play" class="h-12" />
+      </a>
+      <a href="https://apps.apple.com/us/app/clínica-ricardo-palma/id6754467033" target="_blank" rel="noreferrer noopener">
+        <img src="wp-content/uploads/2026/02/app-store.svg" alt="Descárgalo en el App Store" class="h-12" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal: Deja tu felicitación -->
+@if (feedbackModalOpen()) {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="feedback-modal-title"
+    (click)="closeFeedbackModal()"
+    (keydown.escape)="closeFeedbackModal()"
+  >
+    <div class="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl" (click)="$event.stopPropagation()">
+      <div class="flex items-start justify-between">
+        <h2 id="feedback-modal-title" class="text-lg font-semibold text-gray-900">Deja tu felicitación</h2>
+        <button type="button" class="text-gray-400 hover:text-gray-600" aria-label="Cerrar" (click)="closeFeedbackModal()">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      @if (feedbackSubmitted()) {
+        <p class="mt-4 text-sm text-teal-700">¡Gracias por compartir tu experiencia con nosotros!</p>
+      } @else {
+        <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()" class="mt-4 space-y-4" novalidate>
+          <div>
+            <label for="feedback-nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input
+              id="feedback-nombre"
+              type="text"
+              formControlName="nombre"
+              class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+            />
+            @if (feedbackForm.controls.nombre.invalid && feedbackForm.controls.nombre.touched) {
+              <p class="mt-1 text-xs text-red-600">Ingresa tu nombre.</p>
+            }
+          </div>
+          <div>
+            <label for="feedback-mensaje" class="block text-sm font-medium text-gray-700">Tu experiencia</label>
+            <textarea
+              id="feedback-mensaje"
+              formControlName="mensaje"
+              rows="4"
+              class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
+            ></textarea>
+            @if (feedbackForm.controls.mensaje.invalid && feedbackForm.controls.mensaje.touched) {
+              <p class="mt-1 text-xs text-red-600">Cuéntanos tu experiencia.</p>
+            }
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-full bg-pink-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-pink-600"
+          >
+            Enviar
+          </button>
+        </form>
+      }
+    </div>
+  </div>
+}

@@ -1,0 +1,188 @@
+<section class="relative overflow-hidden bg-[#e4f7f7]">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#f3fbfa] via-[#d9f3f3] to-[#c5eeee]" aria-hidden="true"></div>
+  <div class="relative mx-auto grid max-w-7xl items-center gap-5 px-5 py-8 sm:px-8 sm:py-11 md:grid-cols-[1fr_0.72fr] lg:px-10">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#b52e6c]">Cirugía bariátrica</p>
+      <h1 class="mt-2 max-w-lg text-3xl font-bold leading-tight text-[#b52e6c] sm:text-4xl">
+        Da el primer paso<br /> hacia tu bienestar
+      </h1>
+      <p class="mt-3 max-w-lg text-sm leading-relaxed text-slate-700">
+        Conoce nuestras alternativas de cirugía bariátrica.
+      </p>
+      <a
+        [href]="appointmentUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-5 inline-flex min-h-10 items-center justify-center rounded-full bg-[#c73376] px-5 py-2 text-sm font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+      >
+        Agenda tu cita
+      </a>
+    </div>
+    <div class="flex min-h-64 items-center justify-center overflow-hidden rounded-2xl border border-white/70 bg-gradient-to-b from-[#d3e5e7] to-[#f6ece6] sm:min-h-72">
+      <svg viewBox="0 0 440 320" class="h-full w-full max-w-md" role="img" aria-labelledby="bariatric-hero-title bariatric-hero-desc">
+        <title id="bariatric-hero-title">Ilustración para la página de cirugía bariátrica</title>
+        <desc id="bariatric-hero-desc">Ilustración decorativa de una persona realizando actividad física y conversando con un profesional de salud.</desc>
+        <rect width="440" height="320" fill="#e9f1f2" />
+        <path d="M0 230h440v90H0z" fill="#d6c6ad" />
+        <path d="M20 40h90m220 0h90M38 62h45m280-22h40" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <circle cx="160" cy="80" r="20" fill="#b98268" />
+        <path d="M143 77c2-26 36-31 40-4-13-1-21-7-26-14-2 9-7 14-14 18Z" fill="#443d3c" />
+        <path d="m144 104 35 4 22 50-20 12-24-32-12 54h-42l20-60 4-20 17-8Z" fill="#b34c75" />
+        <path d="m146 117-27 28-28 10 4 10 39-4 33-26m31 22 30 18 23 1 2 10-33 5-42-19" stroke="#b98268" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m130 191-13 57-26 26 13 7 43-23 16-57m12-26 18 49 33 23 10 8 12-2-2-13-33-39-16-51" stroke="#526a77" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M101 279h-20m128 2 18 7" stroke="#fff" stroke-width="8" stroke-linecap="round" />
+        <path d="M280 200h114v44H280z" fill="#fff" stroke="#b9ced2" stroke-width="4" />
+        <path d="M294 217h24l11 16 14-26 13 17h23" stroke="#25aaa7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="324" cy="107" r="17" fill="#a97862" />
+        <path d="M307 108c0-28 33-35 42-10-12 2-22-3-28-11-1 9-6 16-14 21Z" fill="#534440" />
+        <path d="m306 131 33-5 24 37-18 10-21-22-4 48h-41l12-48 3-14 12-6Z" fill="#fff" />
+        <path d="m298 144-24 24-29 8m97-40 20 24 17 5" stroke="#a97862" stroke-width="8" stroke-linecap="round" />
+        <path d="M287 190c-3 30-3 50-2 70m46-59 11 59m-61 0h20m32 0h20" stroke="#637d89" stroke-width="9" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#f4f2ff] py-6">
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-7 gap-y-4 px-5 sm:px-8">
+    @for (item of ['Enfermedades cardiovasculares', 'Diabetes', 'Hígado graso', 'Apnea del sueño', 'Apnea del sueño', 'Infertilidad']; track $index) {
+      <div class="flex w-24 flex-col items-center text-center text-[10px] text-slate-600">
+        <svg class="h-7 w-7 text-[#8d71e7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v18m9-9H3" />
+          <circle cx="12" cy="12" r="8" />
+        </svg>
+        <span class="mt-1">{{ item }}</span>
+      </div>
+    }
+  </div>
+</section>
+
+<section aria-labelledby="packages-title" class="bg-white py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="packages-title" class="text-center text-xl font-semibold leading-snug text-[#075461] sm:text-2xl">
+      Paquetes que integran todo lo que necesitas para comenzar
+      <span class="font-serif italic text-[#10aaa4]"> tu cambio</span>
+    </h2>
+    <p class="mt-2 text-center text-xs text-slate-500">Conoce nuestras alternativas de cirugía bariátrica.</p>
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      @for (package of packages; track package) {
+        <article class="overflow-hidden rounded-xl bg-[#edf3f7]">
+          <div class="flex aspect-[1.8] items-center justify-center bg-gradient-to-br from-[#d9e9ee] to-[#f5f7f8]">
+            <svg viewBox="0 0 420 230" class="h-full w-full" role="img" [attr.aria-label]="'Ilustración representativa de ' + package">
+              <rect width="420" height="230" fill="#eaf2f4" />
+              <path d="M0 188h420v42H0z" fill="#d5e0df" />
+              <circle cx="122" cy="72" r="17" fill="#b88168" />
+              <path d="M105 73c0-26 30-32 38-7-12 1-21-4-26-12-2 8-6 14-12 19Z" fill="#4c3f3e" />
+              <path d="m106 94 32 4 22 41-19 11-22-27-8 43H73l15-47 3-17 15-8Z" fill="#fff" />
+              <path d="M102 163h42m-50 0-12 28m56-28 12 28" stroke="#7f9aa3" stroke-width="10" stroke-linecap="round" />
+              <circle cx="284" cy="69" r="17" fill="#ca9d84" />
+              <path d="M267 70c0-26 30-32 38-7-12 1-21-4-26-12-2 8-6 14-12 19Z" fill="#4c3f3e" />
+              <path d="m267 92 32 4 22 41-19 11-22-27-8 43h-38l15-47 3-17 15-8Z" fill="#fff" />
+              <path d="M263 161h42m-50 0-12 30m56-30 12 30" stroke="#7f9aa3" stroke-width="10" stroke-linecap="round" />
+              <path d="M152 133h94m-72-20 20 20-20 20m61-39-20 19 20 20" stroke="#8ac9cd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M185 88h30v32h-30z" fill="#fff" stroke="#9bb8c0" stroke-width="3" />
+              <path d="M190 105h6l4-9 6 18 4-9h6" stroke="#20aaa7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="p-4 sm:p-5">
+            <h3 class="text-sm font-semibold text-[#bd2d70]">{{ package }}</h3>
+            <a
+              [href]="appointmentUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-4 inline-flex min-h-8 items-center justify-center rounded-full bg-[#c83376] px-4 py-1.5 text-xs font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+            >
+              Contacta a un asesor
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="process-title" class="bg-[#f2f9f8] py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-2xl bg-white p-5 sm:p-8">
+      <h2 id="process-title" class="text-center text-xl font-semibold text-slate-700 sm:text-2xl">
+        Atención <span class="font-serif italic text-[#10aaa4]">personalizada</span>
+      </h2>
+      <p class="mt-2 text-center text-xs text-slate-500">
+        Te ofrecemos una atención personalizada para que vivas tu tratamiento con tranquilidad y seguridad.
+      </p>
+      <ol class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        @for (step of evaluationSteps; track step; let index = $index) {
+          <li class="flex min-h-28 flex-col items-center justify-center rounded-xl border border-[#e0eeee] p-4 text-center">
+            <svg class="h-7 w-7 text-[#16aaa6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path [attr.d]="index === 0 ? 'M12 3v18m9-9H3' : index === 1 ? 'M5 4h14v16H5zM8 8h8m-8 4h8m-8 4h5' : index === 2 ? 'M4 5h16v14H4zM8 9h8m-8 4h6' : 'M8 3v5m8-5v5M5 7h14v14H5zM8 12h8m-8 4h5'" />
+            </svg>
+            <span class="mt-2 text-xs font-medium text-slate-600">{{ step }}</span>
+          </li>
+        }
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="payments-title" class="bg-white py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="payments-title" class="text-sm font-bold text-[#075461]">BCP, BBVA y Scotiabank</h2>
+    <p class="mt-1 text-sm font-semibold text-[#087f83]">Tu salud no puede esperar</p>
+    <div class="mt-3 flex items-center gap-5" aria-label="Entidades financieras indicadas en la referencia">
+      <span class="text-xl font-bold tracking-tight text-[#0757a4]">BBVA</span>
+      <span class="text-sm font-semibold text-[#d72c48]">Scotiabank</span>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="benefits-title" class="bg-[#f5f6f7] py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="benefits-title" class="text-center text-xl font-semibold text-slate-700 sm:text-2xl">
+      Beneficios que transforman
+      <span class="text-[#7562dc]"> tu salud y calidad de vida</span>
+    </h2>
+    <p class="mt-2 text-center text-xs text-slate-500">
+      Conoce algunos de los beneficios que pueden acompañar este proceso.
+    </p>
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+      @for (group of benefitGroups; track group.title) {
+        <article class="overflow-hidden rounded-xl bg-white shadow-sm">
+          <img [src]="group.image" [alt]="group.imageAlt" loading="lazy" class="aspect-[1.7] w-full object-cover" />
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-[#087f83]">{{ group.title }}</h3>
+            <ul class="mt-2 space-y-1.5">
+              @for (point of group.points; track point) {
+                <li class="flex items-start gap-2 text-xs leading-relaxed text-slate-600">
+                  <span class="mt-1 text-[#16aaa6]" aria-hidden="true">●</span>{{ point }}
+                </li>
+              }
+            </ul>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="specialist-title" class="relative overflow-hidden bg-[#dcf7f7] py-9 sm:py-12">
+  <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-white/50" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="max-w-3xl">
+      <h2 id="specialist-title" class="text-xl font-semibold text-slate-700 sm:text-2xl">Conoce a nuestro especialista</h2>
+      <p class="mt-2 font-serif text-xl font-bold italic text-[#11aaa4] sm:text-2xl">
+        Dr. Fernando Schaffino – Cirujano Bariátrico
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-slate-700">
+        Cirujano Bariátrico.
+      </p>
+      <a
+        [href]="appointmentUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-5 inline-flex min-h-9 items-center justify-center rounded-lg bg-[#08aaa6] px-4 py-2 text-xs font-semibold text-white hover:bg-[#078e8b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-900"
+      >
+        Agendar cita
+      </a>
+    </div>
+  </div>
+</section>

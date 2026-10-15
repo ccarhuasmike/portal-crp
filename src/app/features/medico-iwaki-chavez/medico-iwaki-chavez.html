@@ -1,0 +1,125 @@
+<section class="bg-[#eaf0f5]">
+  <div class="mx-auto max-w-7xl px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+    <nav aria-label="Ruta de navegación" class="text-xs text-slate-700">
+      <ol class="flex flex-wrap items-center gap-2">
+        <li>
+          <a
+            routerLink="/"
+            aria-label="Inicio"
+            class="rounded-sm hover:text-[#087f83] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z" />
+            </svg>
+          </a>
+        </li>
+        <li aria-hidden="true">›</li>
+        <li><a routerLink="/medicos" class="hover:text-[#087f83]">Personal médico</a></li>
+        <li aria-hidden="true">›</li>
+        <li aria-current="page" class="font-medium text-slate-800">Iwaki Chavez, Roberto</li>
+      </ol>
+    </nav>
+    <h1 class="mt-4 text-3xl font-semibold tracking-tight text-[#075461] sm:text-4xl">
+      Conoce a: &nbsp;Iwaki Chavez, Roberto
+    </h1>
+  </div>
+</section>
+
+<section aria-label="Perfil profesional" class="bg-white">
+  <div class="mx-auto max-w-7xl px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+    <div class="grid gap-8 md:grid-cols-[minmax(240px,0.72fr)_1.28fr] md:gap-12">
+      <div>
+        <div class="flex aspect-[4/5] max-h-[420px] items-end justify-center overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-b from-[#8c95a8] via-[#d5dbe4] to-[#eef2f6]">
+          <svg viewBox="0 0 300 380" class="h-full w-full" role="img" aria-labelledby="portrait-title portrait-description">
+            <title id="portrait-title">Ilustración representativa de un médico</title>
+            <desc id="portrait-description">Ilustración genérica, no es una fotografía de Iwaki Chavez.</desc>
+            <ellipse cx="150" cy="363" rx="112" ry="17" fill="#aab6c4" opacity=".45" />
+            <path d="M86 205c13-31 37-44 64-44s52 13 65 44l28 153H57l29-153Z" fill="#f8fbfd" />
+            <path d="m120 168 30 44 31-44-10-19h-40l-11 19Z" fill="#fff" />
+            <path d="m120 168 30 44-17 29-32-55 19-18Zm61 0-31 44 17 29 32-55-18-18Z" fill="#dce8ef" />
+            <path d="M114 87c0-35 16-56 39-56 24 0 40 21 40 56v40c0 29-16 49-40 49-23 0-39-20-39-49V87Z" fill="#bc8d76" />
+            <path d="M111 99c-9-43 4-76 37-82 29-6 53 14 53 48 0 19-5 29-9 39-4-17-9-28-20-35-17 13-39 18-61 17v13h-4Z" fill="#555657" />
+            <path d="M126 112h.01m43 0h.01m-31 24c8 6 17 6 25 0" stroke="#694d49" stroke-width="3" stroke-linecap="round" />
+            <path d="M115 242h70m-66 31h62m-59 31h56" stroke="#e4ebef" stroke-width="5" stroke-linecap="round" />
+            <path d="M144 211h13l-6 28 14 26-15 74-16-74 15-26-5-28Z" fill="#28435a" />
+            <path d="M88 223c-8 20-7 56-2 86m126-86c8 20 7 56 2 86" stroke="#d3dee5" stroke-width="4" />
+            <path d="M84 254c-10 2-15 12-15 24v46m146-70c10 2 15 12 15 24v46" stroke="#86cbd0" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <section aria-labelledby="education-title" class="mt-7">
+          <h2 id="education-title" class="text-xl font-semibold text-[#087f83]">Educación</h2>
+          <ul class="mt-4 space-y-4">
+            @for (item of education; track item.label) {
+              <li class="flex gap-4">
+                <svg class="mt-1 h-8 w-8 shrink-0 text-[#43c4c5]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m3 10 13-6 13 6-13 6-13-6Zm5 3v8c5 4 11 4 16 0v-8M29 10v10" />
+                  <circle cx="29" cy="22" r="1.5" fill="currentColor" />
+                </svg>
+                <div class="min-w-0">
+                  <p class="text-xs text-slate-400">{{ item.label }}</p>
+                  <p class="text-sm font-medium text-slate-700">{{ item.qualification }}</p>
+                  <p class="mt-1 text-xs leading-relaxed text-slate-500">{{ item.institution }}</p>
+                </div>
+              </li>
+            }
+          </ul>
+        </section>
+      </div>
+
+      <div class="flex flex-col justify-center py-2 md:py-8">
+        <h2 class="text-xl font-medium text-slate-800 sm:text-2xl">Iwaki Chavez, Roberto</h2>
+        <p class="mt-3 w-fit rounded-full bg-[#b52b68] px-3 py-1 text-xs font-semibold text-white">
+          Cirugía de Cabeza y Cuello
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="appointment-title" class="bg-white pb-10 sm:pb-14">
+  <div class="mx-auto grid max-w-7xl items-center gap-7 px-5 sm:px-8 md:grid-cols-2 lg:gap-10 lg:px-10">
+    <div class="flex aspect-[1.55] min-h-52 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-[#e3f1f5] via-[#f2f7f9] to-[#d8e8ef] p-5">
+      <svg viewBox="0 0 520 300" class="h-full w-full max-w-xl" role="img" aria-labelledby="appointment-image-title appointment-image-description">
+        <title id="appointment-image-title">Ilustración de una consulta médica</title>
+        <desc id="appointment-image-description">Ilustración decorativa de un médico conversando con un paciente, no es una fotografía real.</desc>
+        <rect x="24" y="34" width="472" height="232" rx="18" fill="#f8fbfc" />
+        <path d="M55 91h142m-142 20h101" stroke="#c4d9e2" stroke-width="9" stroke-linecap="round" />
+        <path d="M96 204c8-46 39-71 78-71 40 0 68 25 76 71v31H96v-31Z" fill="#8db8d3" />
+        <circle cx="175" cy="108" r="37" fill="#c99b83" />
+        <path d="M139 105c1-34 18-52 41-49 22 2 34 19 30 43-13-3-23-11-29-21-10 16-24 24-42 27Z" fill="#554d50" />
+        <path d="M317 120c0-43 18-66 48-66 29 0 47 23 47 66v28c0 31-18 51-47 51-30 0-48-20-48-51v-28Z" fill="#dfb39d" />
+        <path d="M314 129c-4-49 17-83 54-83 31 0 50 26 47 62-13-5-25-15-31-28-13 17-37 26-67 25l-3 24Z" fill="#624b49" />
+        <path d="M283 272c4-53 33-82 82-82 50 0 77 29 82 82H283Z" fill="#fff" stroke="#d5e2e8" stroke-width="3" />
+        <path d="m344 198 21 32 22-32m-22 32v36" stroke="#54bfc3" stroke-width="5" stroke-linecap="round" />
+        <path d="M330 132h.01m34 0h.01m-24 17c6 5 12 5 18 0" stroke="#765752" stroke-width="3" stroke-linecap="round" />
+        <path d="M221 204c12-18 32-28 57-29" stroke="#75b9c2" stroke-width="5" stroke-linecap="round" />
+        <circle cx="282" cy="175" r="7" fill="#75b9c2" />
+      </svg>
+    </div>
+    <div>
+      <h2 id="appointment-title" class="text-2xl font-semibold leading-snug text-[#075461] sm:text-3xl">
+        Programa tu cita médica<br class="hidden sm:block" /> con nosotros
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-slate-700">
+        Accede fácilmente a nuestros servicios y coordina tu atención con el especialista de tu preferencia, de manera rápida y segura.
+      </p>
+      <ul class="mt-4 space-y-2">
+        @for (step of appointmentSteps; track step) {
+          <li class="flex items-start gap-2 text-sm text-slate-600">
+            <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#13aaa4] text-[10px] font-bold text-white" aria-hidden="true">✓</span>
+            {{ step }}
+          </li>
+        }
+      </ul>
+      <a
+        [href]="appointmentUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#08aaa6] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#078e8b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-900"
+      >
+        Agenda tu cita
+      </a>
+    </div>
+  </div>
+</section>

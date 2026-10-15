@@ -1,0 +1,91 @@
+<div>
+  <section class="grid min-h-[20rem] grid-cols-1 bg-[#f4fafa] md:min-h-[23rem] md:grid-cols-2" aria-labelledby="about-title">
+    <div class="relative flex items-center overflow-hidden px-6 py-12 sm:px-10 lg:px-16 xl:px-[max(4rem,calc((100vw-76rem)/2))]">
+      <div class="absolute -left-16 top-8 h-48 w-36 -rotate-[20deg] rounded-[3rem] bg-[#d9f1f1] sm:-left-12 sm:h-64 sm:w-44" aria-hidden="true"></div>
+      <div class="relative z-10 mx-auto w-full max-w-lg">
+        <h1 id="about-title" class="font-serif text-3xl font-semibold italic leading-tight text-teal-700 sm:text-4xl">
+          50 años cuidando<br />de ti y de tu familia
+        </h1>
+        <p class="mt-4 max-w-md text-sm leading-6 text-slate-700">
+          Nuestra historia es la de miles de familias que confían cada día en nuestra atención, innovación y calidad humana.
+        </p>
+      </div>
+    </div>
+    <div class="min-h-60 overflow-hidden sm:min-h-72 md:min-h-0">
+      <img
+        class="h-full min-h-60 w-full object-cover object-center sm:min-h-72 md:min-h-full"
+        src="/wp-content/uploads/2026/04/Nosotros.png"
+        alt="Profesionales de la Clínica Ricardo Palma brindando orientación médica"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+      />
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:px-8" aria-label="Misión y visión">
+    <div class="space-y-4">
+      <article class="rounded-2xl bg-[#f4fafa] p-5 sm:p-7">
+        <h2 class="text-lg font-semibold text-teal-800">Misión</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-700">
+          Brindar servicios de salud confiables y seguros a nuestra comunidad orientándonos permanentemente hacia la excelencia.
+        </p>
+      </article>
+      <article class="rounded-2xl bg-[#f4fafa] p-5 sm:p-7">
+        <h2 class="text-lg font-semibold text-teal-800">Visión</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-700">
+          Ser reconocidos en el ámbito de salud por nuestro prestigio, trayectoria y vocación de servicio, orientados a nuestros pacientes, clientes y colaboradores.
+        </p>
+      </article>
+    </div>
+    <img
+      class="aspect-[4/3] w-full rounded-2xl object-cover"
+      src="/wp-content/uploads/2026/04/equipo-medico.png"
+      alt="Equipo médico de la Clínica Ricardo Palma trabajando unido"
+      width="1920"
+      height="1080"
+      loading="lazy"
+      decoding="async"
+    />
+  </section>
+
+  <section class="bg-violet-50/70 py-12 sm:py-16" aria-labelledby="values-title">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 id="values-title" class="text-2xl font-semibold text-slate-700 sm:text-3xl">
+        Nuestros valores, nuestra esencia
+      </h2>
+      <p class="mt-3 max-w-4xl text-sm leading-6 text-slate-600">
+        Nuestros valores marcan el camino de cada acción y cada cuidado. Son el fundamento de una atención humana, segura y profesional para todos nuestros pacientes.
+      </p>
+      <div class="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        @for (value of values; track value.name) {
+          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
+            <img class="h-10 w-10 object-contain" [src]="value.icon" [alt]="value.iconAlt" width="40" height="40" loading="lazy" />
+            <h3 class="mt-4 text-sm font-semibold text-slate-800">{{ value.name }}</h3>
+            <p class="mt-2 text-xs leading-5 text-slate-600">{{ value.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="history-title">
+    <div class="grid overflow-hidden rounded-2xl bg-[#f4fafa] lg:grid-cols-2">
+      <img
+        class="h-full min-h-64 w-full object-cover sm:min-h-80"
+        src="/wp-content/uploads/2026/04/historia-1.png"
+        alt="Sede de la Clínica Ricardo Palma a través de su historia"
+        width="1920"
+        height="1080"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="flex flex-col justify-center p-6 sm:p-10 lg:p-12">
+        <h2 id="history-title" class="text-2xl font-semibold text-violet-600 sm:text-3xl">Historia</h2>
+        <p class="mt-4 text-sm leading-6 text-slate-700">
+          La Clínica Ricardo Palma fue un proyecto elaborado por los doctores José Zaidman y Eduardo Sala en el año 1968, pero no fue sino hasta 1975 que su fundación se hizo realidad. Desde sus inicios se caracterizó no solo por brindar servicios especializados de atención en salud por medio de un prestigioso conjunto de profesionales y por poseer un equipamiento de última generación e infraestructura especializada, sino por sobre todas las cosas, por tener el aporte invaluable de cada uno de sus colaboradores.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

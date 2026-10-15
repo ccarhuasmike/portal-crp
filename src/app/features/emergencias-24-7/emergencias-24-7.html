@@ -1,0 +1,100 @@
+<section class="bg-[#f7f5ff]">
+  <div class="mx-auto grid max-w-7xl items-stretch lg:min-h-[420px] lg:grid-cols-2">
+    <div class="relative flex items-center overflow-hidden px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
+      <div class="absolute -left-24 -top-20 h-72 w-72 rounded-full bg-[#ece7ff]" aria-hidden="true"></div>
+      <div class="relative max-w-xl">
+        <h1 class="text-3xl font-bold leading-tight text-[#07515b] sm:text-4xl">
+          Emergencias las <em class="font-serif text-[#7856e8]">24 horas</em>
+        </h1>
+        <p class="mt-5 font-serif text-lg font-semibold italic text-slate-800">
+          Atención inmediata y especializada
+        </p>
+        <p class="mt-4 max-w-lg text-sm leading-relaxed text-slate-700">
+          Nuestro equipo médico está preparado para actuar con rapidez, precisión y humanidad ante
+          cualquier situación crítica.
+        </p>
+        <a
+          [href]="emergencyPhone"
+          class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#10aaa4] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#078c88] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-900"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" />
+          </svg>
+          Solicitar atención inmediata
+        </a>
+      </div>
+    </div>
+    <img
+      src="wp-content/uploads/2026/09/DSC0145-600x338.jpg"
+      alt="Sala de operaciones equipada para atención médica"
+      width="600"
+      height="338"
+      fetchpriority="high"
+      class="aspect-[1.55] h-full w-full object-cover lg:aspect-auto"
+    />
+  </div>
+</section>
+
+<section aria-label="Servicios de emergencia" class="bg-white py-8 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-4 md:grid-cols-3">
+      @for (service of services; track service.title) {
+        <article
+          class="overflow-hidden rounded-xl border-2 bg-[#f0f8f7] p-3 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          [class.border-[#7856e8]]="activeService() === $index"
+          [class.border-transparent]="activeService() !== $index"
+        >
+          <img
+            [src]="service.image"
+            [alt]="service.imageAlt"
+            width="600"
+            height="400"
+            loading="lazy"
+            class="aspect-[1.5] w-full rounded-lg object-cover"
+          />
+          <div class="px-1 pb-2 pt-3">
+            <h2 class="text-base font-semibold text-[#7454df]">{{ service.title }}</h2>
+            <p class="mt-1 text-sm leading-relaxed text-slate-800">{{ service.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+    <div class="mt-4 flex justify-center gap-2" role="group" aria-label="Servicios de emergencia">
+      @for (service of services; track service.title; let i = $index) {
+        <button
+          type="button"
+          class="h-2 w-5 rounded-full transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-800"
+          [class.bg-[#7856e8]]="activeService() === i"
+          [class.bg-[#d9ccff]]="activeService() !== i"
+          [attr.aria-label]="'Seleccionar ' + service.title"
+          [attr.aria-pressed]="activeService() === i"
+          (click)="selectService(i)"
+        ></button>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-white pb-12 pt-5 sm:pb-16 sm:pt-8" aria-labelledby="atencion-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="atencion-title" class="text-2xl font-semibold text-[#07515b] sm:text-3xl">
+        Atención inmediata cuando más lo <em class="font-serif text-[#13aaa4]">necesitas</em>
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-slate-700">
+        En nuestra área de Urgencias, contamos con un equipo preparado para responder de forma rápida,
+        segura y especializada ante cualquier situación crítica. Estamos disponibles las 24 horas
+        para brindarte el cuidado que tu salud requiere.
+      </p>
+    </div>
+    <div
+      class="mt-7 flex aspect-video w-full items-center justify-center rounded-xl bg-black sm:mt-8"
+      role="img"
+      aria-label="Espacio para el video informativo de Emergencias 24/7"
+    >
+      <svg class="h-9 w-9 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="m8 5 11 7-11 7V5Z" />
+      </svg>
+    </div>
+  </div>
+</section>

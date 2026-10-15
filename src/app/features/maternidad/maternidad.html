@@ -1,0 +1,244 @@
+<section class="overflow-hidden bg-[#fff1f6]">
+  <div class="mx-auto grid max-w-7xl items-center gap-6 px-5 py-9 sm:px-8 sm:py-12 md:grid-cols-2 lg:px-10 lg:py-14">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c72d72]">Clínica Ricardo Palma</p>
+      <h1 class="mt-2 text-3xl font-bold leading-tight text-[#b82e6b] sm:text-4xl">
+        Tu maternidad,<br /> acompañada con<br class="hidden sm:block" /> confianza y cuidado
+      </h1>
+      <a
+        href="#paquetes-maternidad"
+        class="mt-5 inline-flex min-h-10 items-center justify-center rounded-full border border-[#d43e7c] px-5 py-2 text-sm font-semibold text-[#bd2d70] transition hover:bg-[#d43e7c] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+      >
+        Paquetes de maternidad
+      </a>
+    </div>
+    <img
+      src="/wp-content/uploads/2026/09/doctor-are-checking-pregnant-woman-with-stethoscope-hospital-healthcare-concept-600x401.jpg"
+      alt="Profesional de salud realizando un control prenatal"
+      width="600"
+      height="401"
+      fetchpriority="high"
+      class="aspect-[1.4] w-full rounded-2xl object-cover shadow-sm"
+    />
+  </div>
+</section>
+
+<section id="paquetes-maternidad" aria-labelledby="packages-title" class="bg-white py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      @for (package of packages; track package.name) {
+        <article class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+          <div class="relative flex h-36 items-center justify-center overflow-hidden bg-[#f9e8ef]">
+            <svg class="h-12 w-12 text-[#d34784]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path [attr.d]="package.icon" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+            <span class="absolute inset-0 bg-gradient-to-t from-[#a82c65]/10 to-transparent" aria-hidden="true"></span>
+          </div>
+          <div class="flex min-h-40 flex-col p-4">
+            <h2 class="text-sm font-semibold text-[#bd2d70]">{{ package.name }}</h2>
+            <a
+              [href]="appointmentUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto ml-auto inline-flex min-h-8 items-center rounded-full border border-[#d43e7c] px-3 py-1.5 text-xs font-semibold text-[#bd2d70] hover:bg-[#d43e7c] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+            >
+              Agenda tu cita
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+    <div class="mt-5 text-center">
+      <a
+        [href]="appointmentUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-h-9 items-center justify-center rounded-full bg-[#c83376] px-5 py-2 text-xs font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+      >
+        Ver paquetes de maternidad
+      </a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="reasons-title" class="bg-white pb-10 sm:pb-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="reasons-title" class="text-center text-2xl font-bold text-[#c33273] sm:text-3xl">
+      ¿Por qué elegirnos?
+    </h2>
+    <div class="mx-auto mt-6 grid max-w-3xl grid-cols-4 gap-3" aria-hidden="true">
+      @for (item of packages; track item.name) {
+        <span class="flex h-14 items-center justify-center rounded-xl border border-[#eadfea] bg-[#f8fbfc]">
+          <svg class="h-6 w-6 text-[#d34784]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path [attr.d]="item.icon" />
+            <circle cx="12" cy="12" r="9" />
+          </svg>
+        </span>
+      }
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="technology-title" class="bg-[#fff1f6] py-9 sm:py-12">
+  <div class="mx-auto grid max-w-7xl items-center gap-6 px-5 sm:px-8 md:grid-cols-[1.3fr_0.7fr] lg:px-10">
+    <div class="text-center md:text-left">
+      <h2 id="technology-title" class="text-2xl font-bold leading-snug text-[#bd2d70] sm:text-3xl">
+        Donde la tecnología y el cuidado<br class="hidden sm:block" /> se unen para tu bienestar
+      </h2>
+    </div>
+    <div class="overflow-hidden rounded-xl bg-white shadow-sm">
+      <img
+        src="/wp-content/uploads/2026/09/DSC0145-600x338.jpg"
+        alt="Equipamiento de una sala quirúrgica"
+        width="600"
+        height="338"
+        loading="lazy"
+        class="aspect-[1.6] w-full object-cover"
+      />
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="stages-title" class="bg-white py-10 sm:py-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="stages-title" class="text-center text-xl font-bold text-[#bd2d70] sm:text-2xl">
+      Te acompañamos en cada etapa de tu embarazo
+    </h2>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      @for (stage of pregnancyStages; track stage) {
+        <li>
+          <article class="flex h-full min-h-48 flex-col rounded-xl bg-[#eef3f7] p-4">
+            <svg class="h-7 w-7 text-[#d34784]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v18m9-9H3" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+            <h3 class="mt-4 text-sm font-semibold text-[#bd2d70]">{{ stage }}</h3>
+            @if (stage === 'Después del parto') {
+              <img
+                src="/wp-content/uploads/2026/09/doctor-are-checking-pregnant-woman-with-stethoscope-hospital-healthcare-concept-600x401.jpg"
+                alt="Control de salud durante la maternidad"
+                loading="lazy"
+                class="mt-3 aspect-[1.6] w-full rounded-lg object-cover"
+              />
+            }
+          </article>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="psychoprophylaxis-title" class="bg-[#fff1f6] py-9 sm:py-12">
+  <div class="mx-auto grid max-w-7xl items-center gap-6 px-5 sm:px-8 md:grid-cols-2 lg:px-10">
+    <div>
+      <h2 id="psychoprophylaxis-title" class="text-2xl font-bold text-[#bd2d70]">
+        Programa de Psicoprofilaxis
+      </h2>
+      <a
+        [href]="appointmentUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-flex min-h-9 items-center justify-center rounded-full bg-[#c83376] px-5 py-2 text-xs font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+      >
+        Más información
+      </a>
+    </div>
+    <img
+      src="/wp-content/uploads/2026/04/Hero-1.png"
+      alt="Familia compartiendo un momento juntos"
+      width="1200"
+      height="800"
+      loading="lazy"
+      class="aspect-[1.55] w-full rounded-xl object-cover"
+    />
+  </div>
+</section>
+
+<section aria-labelledby="team-title" class="bg-white py-9 sm:py-12">
+  <div class="mx-auto grid max-w-7xl items-center gap-6 px-5 sm:px-8 md:grid-cols-2 lg:px-10">
+    <img
+      src="/wp-content/uploads/2026/04/Buscador_medico-600x600.png"
+      alt="Médico de la Clínica Ricardo Palma"
+      width="600"
+      height="600"
+      loading="lazy"
+      class="aspect-[1.5] w-full rounded-xl object-cover"
+    />
+    <div>
+      <h2 id="team-title" class="text-2xl font-bold text-[#bd2d70]">Equipo médico especializado</h2>
+      <a
+        routerLink="/medicos"
+        class="mt-4 inline-flex min-h-9 items-center justify-center rounded-full bg-[#c83376] px-5 py-2 text-xs font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+      >
+        Conoce a nuestro equipo
+      </a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="guided-tour-title" class="bg-[#eaf0f5] py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="max-w-xl">
+      <h2 id="guided-tour-title" class="text-2xl font-bold text-[#bd2d70]">Agenda tu visita guiada</h2>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="plansalud-title" class="bg-white py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <article class="grid gap-5 rounded-2xl border border-[#f0c6d8] p-6 sm:p-8 md:grid-cols-2 md:items-center">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wide text-[#c83376]">PlanSalud</p>
+        <h2 id="plansalud-title" class="mt-2 text-xl font-bold leading-snug text-[#bd2d70] sm:text-2xl">
+          Protege a tu bebé,<br /> completamente cubierta con PlanSalud
+        </h2>
+      </div>
+      <div>
+        <a
+          routerLink="/plansalud"
+          class="mt-4 inline-flex min-h-9 items-center justify-center rounded-full border border-[#c83376] px-4 py-2 text-xs font-semibold text-[#bd2d70] hover:bg-[#c83376] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+        >
+          Conoce PlanSalud
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="payment-title" class="bg-[#fff1f6] py-8 sm:py-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="payment-title" class="text-xl font-bold text-[#bd2d70]">BCP, BBVA y Scotiabank</h2>
+    <p class="mt-2 text-sm font-medium text-slate-700">Tu salud puede ser pagada por terceros</p>
+  </div>
+</section>
+
+<section aria-labelledby="insurance-title" class="bg-white py-8 sm:py-10">
+  <div class="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-10">
+    <h2 id="insurance-title" class="text-xl font-bold text-[#bd2d70] sm:text-2xl">
+      Accede a tu cobertura con tu seguro de maternidad
+    </h2>
+    <a
+      [href]="appointmentUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-4 inline-flex min-h-8 items-center justify-center rounded-full bg-[#c83376] px-4 py-1.5 text-xs font-semibold text-white hover:bg-[#a92663] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+    >
+      Conoce más
+    </a>
+  </div>
+</section>
+
+<section aria-labelledby="faq-title" class="bg-[#f2f8f7] py-9 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="faq-title" class="text-xl font-semibold text-[#075461]">Preguntas Frecuentes</h2>
+    <ul class="mt-3 divide-y divide-[#d9e8e6]">
+      @for (faq of faqs; track faq) {
+        <li class="flex items-start justify-between gap-4 py-3 text-sm font-medium text-[#075461]">
+          <span>{{ faq }}</span>
+          <span class="shrink-0 text-[#0b9995]" aria-hidden="true">+</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

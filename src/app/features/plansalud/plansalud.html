@@ -1,0 +1,274 @@
+<section class="relative isolate overflow-hidden bg-[#063f47] text-white">
+  <div
+    class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_15%_55%,rgba(23,179,173,0.45),transparent_45%),linear-gradient(115deg,#063f47_0%,#075a62_55%,#07353d_100%)]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-20"
+  >
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-200">PlanSalud</p>
+      <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">¡Afíliate hoy!</h2>
+      <a
+        href="#cotizador_formulario"
+        class="mt-7 inline-flex min-h-11 items-center justify-center rounded-full bg-[#14b4ad] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-black/15 transition hover:bg-teal-300 hover:text-teal-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      >
+        Cotiza tu plan
+      </a>
+    </div>
+    <div class="relative mx-auto w-full max-w-lg">
+      <div class="absolute -inset-3 rotate-2 rounded-[2rem] bg-teal-300/20" aria-hidden="true"></div>
+      <img
+        src="wp-content/uploads/2026/04/proteccion-total-con-PlanSalud-600x600.png"
+        alt="Familia junto a su médico"
+        width="600"
+        height="600"
+        fetchpriority="high"
+        class="relative aspect-[1.35] w-full rounded-[1.75rem] object-cover object-center shadow-2xl"
+      />
+    </div>
+  </div>
+</section>
+
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl px-5 pb-3 pt-7 text-center sm:px-8 lg:px-10">
+    <h1 class="text-2xl font-bold text-[#07545b] sm:text-3xl">
+      Plan de Salud en Clínica Ricardo Palma
+    </h1>
+  </div>
+
+  <section
+    aria-labelledby="que-es-plansalud"
+    class="mx-auto grid max-w-7xl items-center gap-8 px-5 py-10 sm:px-8 md:grid-cols-2 lg:gap-14 lg:px-10 lg:py-14"
+  >
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#17aaa5]">PlanSalud</p>
+      <h2 id="que-es-plansalud" class="mt-2 text-2xl font-bold leading-snug text-[#07545b] sm:text-3xl">
+        ¿Qué es el Plan de Salud en Clínica Ricardo Palma?
+      </h2>
+      <a
+        href="#cotizador_formulario"
+        class="mt-6 inline-flex min-h-10 items-center justify-center rounded-full bg-[#12aaa4] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#078c88] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+      >
+        Afíliate hoy
+      </a>
+    </div>
+    <img
+      src="wp-content/uploads/2026/09/20690-1-600x400.jpg"
+      alt="Atención médica en Clínica Ricardo Palma"
+      width="600"
+      height="400"
+      loading="lazy"
+      class="aspect-[1.55] w-full rounded-2xl object-cover shadow-md"
+    />
+  </section>
+</div>
+
+<section id="beneficios_plan_salud" aria-labelledby="beneficios-title" class="bg-white pb-12 sm:pb-16">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#17aaa5]">PlanSalud</p>
+      <h2 id="beneficios-title" class="mt-2 text-2xl font-bold text-[#6955d5] sm:text-3xl">
+        Beneficios
+      </h2>
+    </div>
+    <div class="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      @for (benefit of benefits; track benefit.title) {
+        <article class="flex min-h-40 flex-col items-center rounded-xl border border-[#e2e8f5] bg-[#f9fbfd] px-4 py-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          <svg
+            class="h-7 w-7 text-[#8171e5]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path [attr.d]="benefit.icon" />
+            <circle cx="12" cy="12" r="9" />
+          </svg>
+          <h3 class="mt-3 text-sm font-semibold text-[#6b5bc8]">{{ benefit.title }}</h3>
+          <a
+            href="#cotizador_formulario"
+            class="mt-auto inline-flex min-h-8 items-center pt-3 text-xs font-semibold text-[#6b5bc8] underline decoration-[#c8c0fa] underline-offset-4 hover:text-[#4936b1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-700"
+          >
+            Ver más
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-8 sm:py-12" aria-labelledby="bono-title">
+  <div class="mx-auto flex max-w-7xl justify-center px-5 sm:px-8 lg:px-10">
+    <article class="w-full max-w-md rounded-2xl bg-[#f6faf9] p-6 shadow-sm sm:p-8">
+      <p class="inline-flex rounded-full bg-amber-300 px-3 py-1 text-[11px] font-bold text-[#513b00]">
+        Beneficio exclusivo para afiliados
+      </p>
+      <h2 id="bono-title" class="mt-4 text-xl font-bold leading-snug text-[#07545b]">
+        Bono PlanSalud para <em class="text-[#12aaa4]">Cirugía Robótica</em>
+      </h2>
+      <a
+        href="servicios/cirugia-robotica/index.html"
+        class="mt-5 inline-flex min-h-10 items-center justify-center rounded-full bg-[#11aaa4] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#078c88] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+      >
+        Conoce más
+      </a>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="beneficios-especiales" class="bg-white py-8 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="text-center">
+      <h2 id="beneficios-especiales" class="text-xl font-bold text-[#ce3983] sm:text-2xl">
+        Más beneficios si ya eres afiliado a PlanSalud
+      </h2>
+    </div>
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      @for (specialty of ['Neurología', 'Urología']; track specialty) {
+        <article class="rounded-xl bg-[#f6faf9] p-5 sm:p-6">
+          <p class="text-xs font-semibold text-[#dc4c91]">Descuento especial</p>
+          <div class="mt-3 flex items-center gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#12aaa4] shadow-sm" aria-hidden="true">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v16m8-8H4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="font-semibold text-[#07545b]">{{ specialty }}</h3>
+              <a href="especialidades/index.html" class="mt-2 inline-block text-xs font-semibold text-[#087f83] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+    <div class="mt-5 text-center">
+      <a
+        href="#beneficios_plan_salud"
+        class="inline-flex min-h-9 items-center justify-center rounded-full bg-[#11aaa4] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#078c88] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+      >
+        Descargar beneficios
+      </a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="requisitos-title" class="bg-white py-8 sm:py-12">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-2xl bg-[#f1edff] px-5 py-7 sm:px-8 sm:py-9">
+      <h2 id="requisitos-title" class="text-xl font-bold text-slate-800">Requisitos</h2>
+      <a
+        href="#anexos_plan_salud"
+        class="mt-5 inline-flex min-h-10 items-center justify-center rounded-full bg-[#7863e8] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#624bd1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-800"
+      >
+        Más información
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cotizador_formulario" aria-labelledby="cotizar-title" class="bg-[#f4faf9] py-10 sm:py-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <h2 id="cotizar-title" class="text-center text-2xl font-bold text-[#12aaa4] sm:text-3xl">
+      Cotiza tu plan
+    </h2>
+    <div class="mx-auto mt-6 max-w-4xl rounded-2xl border border-[#e1edeb] bg-white p-5 shadow-sm sm:p-8">
+      <div class="flex items-center justify-center gap-3" aria-label="Paso 1 de 2">
+        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#11aaa4] text-xs font-bold text-white">1</span>
+        <span class="h-px w-14 bg-slate-200" aria-hidden="true"></span>
+        <span class="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-xs font-bold text-slate-500">2</span>
+      </div>
+      <div class="mt-5 flex flex-wrap items-center justify-between gap-3">
+        <span class="rounded-full bg-[#8171e5] px-3 py-1 text-xs font-bold text-white">Afiliado</span>
+        <h3 class="text-center text-base font-semibold text-slate-800">
+          Define los afiliados de tu plan de salud
+        </h3>
+        <span class="w-16" aria-hidden="true"></span>
+      </div>
+      <div class="mt-5 grid gap-4 sm:grid-cols-3">
+        <label class="text-xs font-medium text-slate-600">
+          Rango de edad
+          <select class="mt-1.5 min-h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-600 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-100">
+            <option selected>Selecciona</option>
+          </select>
+        </label>
+        <label class="text-xs font-medium text-slate-600">
+          Género
+          <select class="mt-1.5 min-h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-600 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-100">
+            <option selected>Selecciona</option>
+          </select>
+        </label>
+        <label class="text-xs font-medium text-slate-600">
+          Parentesco
+          <select class="mt-1.5 min-h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-600 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-100">
+            <option selected>Selecciona</option>
+          </select>
+        </label>
+      </div>
+      <p class="mt-4 text-xs text-[#078f91]">+ Agregar afiliado</p>
+      <div class="mt-5 flex justify-end">
+        <span class="inline-flex min-h-10 items-center justify-center rounded-full bg-[#10aaa4] px-6 text-sm font-semibold text-white">
+          Siguiente
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-5 sm:py-7" aria-label="Pago de cuotas">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="flex flex-col gap-4 rounded-xl bg-[#f0f8f7] p-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+      <p class="text-sm text-slate-700">
+        ¿Quieres pagar tus cuotas de
+        <a href="plansalud/index.html" class="font-semibold text-[#7b67dd] underline underline-offset-2">PlanSalud</a>?
+      </p>
+      <a
+        href="https://portaldelpaciente.crp.com.pe/login"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-h-9 items-center justify-center rounded-full bg-[#7963df] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#624bd1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-800"
+      >
+        Pagar aquí
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="anexos_plan_salud" aria-labelledby="anexos-title" class="bg-white pb-10 sm:pb-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-xl bg-[#f6faf9] p-5 sm:p-8">
+      <p class="text-xs font-semibold text-[#7c68df]">Información importante</p>
+      <h2 id="anexos-title" class="mt-2 text-xl font-bold text-slate-800">
+        Anexos del contrato de tu <em class="text-[#12aaa4]">PlanSalud</em>
+      </h2>
+      <a
+        href="plansalud/index.html#anexos_plan_salud"
+        class="mt-4 inline-flex min-h-9 items-center justify-center rounded-full bg-[#7963df] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#624bd1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-800"
+      >
+        Ver anexos
+      </a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq-title" class="bg-[#f5f5f5] py-10 sm:py-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-2xl bg-[#eff8f7] p-5 sm:p-8">
+      <h2 id="faq-title" class="text-xl font-bold text-slate-700">Preguntas Frecuentes</h2>
+      <ul class="mt-4 divide-y divide-[#dce9e7]">
+        @for (faq of faqs; track faq.question) {
+          <li class="flex items-start justify-between gap-4 py-3 text-sm font-semibold text-[#087c84]">
+            <span>{{ faq.question }}</span>
+            <span class="shrink-0 text-[#087c84]" aria-hidden="true">+</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

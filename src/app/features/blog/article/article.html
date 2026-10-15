@@ -1,0 +1,136 @@
+<article class="bg-white">
+  <div class="border-b border-slate-100 bg-violet-50/70">
+    <div class="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-7 lg:px-8">
+      <nav class="mb-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500" aria-label="Ruta de navegación">
+        <a routerLink="/" class="rounded-sm hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <a routerLink="/blog/" class="rounded-sm hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700">Blog</a>
+        <span aria-hidden="true">›</span>
+        <span>General</span>
+      </nav>
+      <h1 class="max-w-4xl text-2xl font-semibold leading-tight text-violet-700 sm:text-3xl">
+        Amigdalitis: ¿Qué es, por qué aparece y cómo tratarla?
+      </h1>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 pb-14 pt-6 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl">
+      <div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+        <div class="text-xs leading-5 text-teal-800">
+          <p>Por: Clínica Ricardo Palma</p>
+          <time datetime="2026-09-17">17 de septiembre de 2026</time>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            class="inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-teal-600 px-3 text-xs font-medium text-teal-800 transition hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
+            (click)="copyArticleLink()"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+              <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+            </svg>
+            Copiar enlace
+          </button>
+          <button
+            type="button"
+            class="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-600 text-sm font-bold text-white transition hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
+            aria-label="Compartir en Facebook"
+            (click)="shareArticle('facebook')"
+          >
+            f
+          </button>
+          <button
+            type="button"
+            class="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-600 text-xs font-bold text-white transition hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
+            aria-label="Compartir por WhatsApp"
+            (click)="shareArticle('whatsapp')"
+          >
+            WA
+          </button>
+        </div>
+      </div>
+      @if (shareStatus()) {
+        <p class="mb-3 text-right text-xs text-teal-800" role="status" aria-live="polite">{{ shareStatus() }}</p>
+      }
+
+      <img
+        class="mb-7 aspect-[16/9] w-full rounded-xl object-cover object-center sm:mb-9"
+        src="/wp-content/uploads/2026/09/270-2-2.jpg"
+        alt="Profesional de salud revisa la garganta de una paciente"
+        width="1408"
+        height="938"
+        fetchpriority="high"
+      />
+
+      <div class="space-y-7 text-sm leading-7 text-slate-700 sm:space-y-8">
+        <section aria-labelledby="article-introduction">
+          <h2 id="article-introduction" class="mb-2 text-lg font-bold leading-6 text-teal-800 sm:text-xl">
+            Amigdalitis: ¿Qué es, por qué aparece y cómo tratarla?
+          </h2>
+          <p>
+            La amigdalitis es la inflamación de las amígdalas que puede producir dolor de garganta, fiebre y dificultad para tragar. Puede deberse a virus o bacterias; conocer la causa ayuda a definir los cuidados y el tratamiento.
+          </p>
+        </section>
+
+        @for (section of sections; track section.title) {
+          <section>
+            <h2 class="mb-2 text-lg font-bold leading-6 text-teal-800 sm:text-xl">{{ section.title }}</h2>
+            @for (paragraph of section.paragraphs; track paragraph) {
+              <p class="mb-3 last:mb-0">{{ paragraph }}</p>
+            }
+            @if (section.points) {
+              <ul class="mt-2 list-disc space-y-1 pl-5">
+                @for (point of section.points; track point) {
+                  <li>{{ point }}</li>
+                }
+              </ul>
+            }
+          </section>
+        }
+
+        <section aria-labelledby="faq-title" class="overflow-hidden rounded-xl bg-teal-50">
+          <h2 id="faq-title" class="px-5 pb-1 pt-4 text-lg font-medium text-slate-700">Preguntas Frecuentes</h2>
+          <div class="divide-y divide-teal-100">
+            @for (item of questions; track item.question) {
+              <details class="group px-5 py-3">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-sm text-sm font-semibold text-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700 [&::-webkit-details-marker]:hidden">
+                  {{ item.question }}
+                  <span class="shrink-0 text-lg font-normal transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <p class="pt-3 text-sm leading-6 text-slate-700">{{ item.answer }}</p>
+              </details>
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="mx-auto mt-12 max-w-7xl sm:mt-14" aria-labelledby="related-title">
+      <h2 id="related-title" class="mb-5 text-xl font-semibold text-slate-900 sm:text-2xl">
+        Artículos <span class="font-serif italic text-teal-700">relacionados</span>
+      </h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        @for (related of relatedArticles; track related.title) {
+          <article class="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
+            <img
+              class="aspect-[16/10] w-full object-cover"
+              [src]="related.image"
+              [alt]="related.imageAlt"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="p-3.5">
+              <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-teal-50 px-2.5 py-1 text-[10px] font-semibold text-teal-800">{{ related.category }}</span>
+                <time class="text-[10px] text-slate-500" [attr.datetime]="related.date">{{ formatDate(related.date) }}</time>
+              </div>
+              <h3 class="text-sm font-semibold leading-5 text-teal-800">{{ related.title }}</h3>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  </div>
+</article>
